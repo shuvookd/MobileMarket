@@ -1,3 +1,7 @@
+// Function for Searched result spinner 
+const spinner = style =>{
+    document.getElementById('spin').style.display=style;
+};
 // Search bar value 
 const searchMobile =()=>{
     const searchMobile = document.getElementById('search-input');
@@ -34,4 +38,8 @@ const displaySearchResult  = mobile =>{
         });
         spinner('none');
     };
+};
+// Spinner Detaills
+const spinnerInDetail = styleD =>{
+    document.getElementById('spin2').style.display=styleD;
 };

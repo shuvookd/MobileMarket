@@ -7,10 +7,11 @@ const searchMobile =()=>{
     const searchMobile = document.getElementById('search-input');
     const searchText = searchMobile.value;
     spinner('block');
-    const url = `https://openapi.programming-hero.com/api/mobile?search=${searchText}`;
+    const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`;
+    
     fetch(url)
     .then(res => res.json())
-    .then(mobile => showPhone(mobile.data))
+    .then(mobile => displaySearchResult(mobile.data))
     searchMobile.value=''; 
 };
 // Displaying Search Result
@@ -43,8 +44,16 @@ const displaySearchResult  = mobile =>{
 const spinnerInDetail = styleD =>{
     document.getElementById('spin2').style.display=styleD;
 };
+// Get details from phone id/slug 
+const getDetail = details =>{
+    spinnerInDetail('block');
+    const url2 = `https://openapi.programming-hero.com/api/phone/${details}`;
+    fetch(url2)
+    .then(res => res.json())
+    .then(data => showDetail(data.data))
+};
 // Phone Details 
-const phoneDetails = detailShow =>{
+const showDetail = detailShow =>{
     const div2 = document.getElementById('search-phone');
     div2.textContent='';
     const newDiv2 = document.createElement('div');

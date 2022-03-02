@@ -23,7 +23,7 @@
     background-color: rgb(243, 231, 231);
 }
 /* Display hide  */
-.notify, #spin, #spinner2{
+.notify, #spin, #spin2{
     display: none;
 }
 

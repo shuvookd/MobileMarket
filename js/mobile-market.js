@@ -58,9 +58,9 @@ const showDetail = detailShow =>{
     div2.textContent='';
     const newDiv2 = document.createElement('div');
     newDiv2.innerHTML = `
-        <div class="card border-0 p-1 shadow-lg p-3 mb-5 bg-body rounded">
-            <img src="${detailShow.image}" class="card-img-top" alt="...">
-            <div class="card-body">
+        <div class="card border-1 p-1 shadow-lg p-3 mb-5 bg-body rounded">
+            <img src="${detailShow.image}" class="card-img-top card-body" alt="...">
+            <div class="card-body ">
             <h5 class="card-title">${detailShow.name}</h5>
             
             <p class="card-text fw-bolder">Brand: ${detailShow.brand}</p>
